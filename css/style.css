@@ -1,0 +1,334 @@
+/* font-family: 'Muli', sans-serif; */
+/* font-family: 'Muli', sans-serif;
+font-family: 'Nunito', sans-serif; */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Muli", sans-serif;
+  color: #ffffff;
+}
+::-moz-scrollbar-button,
+::-webkit-scrollbar-button {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 5px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ecedee;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  background-color: #6dc0c8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #56999f;
+}
+
+::-webkit-resizer {
+  background-image: url("");
+  background-repeat: no-repeat;
+  width: 4px;
+  height: 0px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header-title {
+  padding-top: 40px;
+  font-size: 100px;
+  padding-bottom: 65px;
+}
+.title {
+  font-weight: bold;
+  text-align: center;
+  font-size: 35px;
+  line-height: 45px;
+  text-transform: uppercase;
+  letter-spacing:0.7px ;
+  color: #000000;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.open-card {
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.open-card__img {
+  background: #007adf;
+  width: 365px;
+  /* border: 1px solid red; */
+  border-radius: 8px 0px 0px 8px;
+  overflow: hidden;
+  
+}
+
+.open-card__img:hover .open-card__img--hotel {
+  transform: scale(1.2);
+}
+
+.open-card__tag {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  position: absolute;
+  background: #ec1f46;
+  border-radius: 0px 4px 4px 0px;
+  padding: 8px 23px 8px 12px;
+  top: 26px;
+  left: 0;
+}
+
+.open-card__img--hotel {
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  height: 500px;
+  transition: transform 1s ease-in;
+}
+
+
+.open-card-descr {
+  padding-left: 46px;
+  padding-right: 21px;
+  padding-top: 43px;
+  background: #0a223d;
+  border-radius: 0px 8px 8px 0px;
+  width: 365px;
+  height: 500px;
+}
+
+.star {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background: url("./../image/icon/star.svg");
+  margin-right: -2.5px;
+  margin-bottom: 4px;
+  transition: rotateZ 0.2s ease-in;
+}
+
+.star:hover{
+  transform: rotateZ(180deg);
+}
+
+.card-descr__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 27px;
+}
+.card-descr__text {
+  height: 160px;
+  font-size: 14px;
+  line-height: 160.6%;
+  margin-bottom: 38px;
+  overflow-x:auto;
+}
+.card-descr-location {
+  font-size: 12px;
+  line-height: 15px;
+}
+.card-descr__place {
+  background: url("./../image/icon/map-pin.svg") no-repeat 2px ;
+  padding-left: 30px;
+  margin-bottom: 11px;
+  
+}
+.card-descr__guest {
+  background: url("./../image/icon/user.svg") no-repeat 2px;
+  padding-left: 30px;
+  margin-bottom: 11px;
+}
+.card-descr__room {
+  background: url('./../image/icon/home.svg') no-repeat 2px ;
+  padding-left: 30px;
+  margin-bottom: 37px;
+}
+.card-descr__price--origin {
+  font-size: 14px;
+  line-height: 18px;
+  text-decoration-line: line-through;
+  /* margin-bottom: px; */
+}
+
+.card-descr-book {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-descr-book__discount {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  /* padding-right: 92px; */
+}
+.card-descr-book__btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 11px 26px;
+  background: #ec1f46;
+  border-radius: 4px;
+  transition: background 0.2s ease-in;
+}
+.card-descr-book__btn:hover {
+  background: #e27b1a;
+}
+
+.close-card {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  width: 350px;
+  position: relative;
+}
+.close-card:nth-child(2),
+.close-card:last-child {
+  margin-right: 0;
+}
+.close-card__tag {
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  position: absolute;
+  background: #ec1f46;
+  border-radius: 0px 4px 4px 0px;
+  padding: 4px 9px;
+  top: 26px;
+  left: 0;
+}
+
+.close-card__img--hotel {
+  height: 250px;
+  width: 100%;
+  border-radius: 8px 8px 0px 0px;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+}
+.close-card-descr {
+  padding-top: 30px;
+  padding-left: 32px;
+  padding-right: 21px;
+  background: #0a223d;
+  border-radius: 0px 0px 8px 8px;
+  width: 350px;
+  height: 250px;
+}
+.close-card-descr__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  margin-bottom: 23px;
+}
+.close-card-descr__room {
+  background: url("./../image/icon/home.svg") no-repeat left 0;
+  padding-left: 29px;
+  margin-bottom: 25px;
+}
+.space{
+  margin-bottom: 200px;
+}
+
+@media screen and (max-width:1143px){
+  .cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .open-card{
+    margin-right: 0;
+  }
+  .close-card{
+    margin-right: 0;
+    margin-bottom: 30px;
+  } 
+  
+}
+@media screen and (max-width:730px){
+  .open-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+  }
+  .open-card__img {
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;    
+  }
+  .open-card__img--hotel {
+    width: 100%;
+  }
+  .open-card-descr{
+    padding-left: 35px;
+    padding-right: 21px;
+    padding-top: 30px;
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    height: 410px;
+  }
+  .close-card {
+    width: 100%;
+  }
+  .card-descr__text {
+    height: 140px;
+    margin-bottom: 0;
+  }
+  .close-card__img--hotel {
+    width: 100%;
+  }
+  .close-card-descr {
+    padding-top: 30px;
+    padding-left: 32px;
+    padding-right: 21px;
+    background: #0a223d;
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    height: 250px;
+  }
+
+}
+@media screen and (max-width:530px){
+  .open-card-descr{
+    height: 450px;
+  }
+  .card-descr__text {
+    height: 150px;
+    margin-bottom: 30px;
+}
+}
+
+
