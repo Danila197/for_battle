@@ -231,6 +231,14 @@ body {
   left: 0;
 }
 
+.close-card__img {
+  background: #007adf;
+  border-radius: 8px 0px 0px 8px;
+  overflow: hidden;
+
+  
+}
+
 .close-card__img--hotel {
   height: 250px;
   width: 100%;
@@ -238,7 +246,23 @@ body {
   object-fit: cover;
   object-position: center;
   overflow: hidden;
+  transition: transform 0.3s ease-in;
 }
+
+.close-card__img:hover .close-card__img--hotel {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+
 .close-card-descr {
   padding-top: 30px;
   padding-left: 32px;
